@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsere Liebe ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin:0;
+  font-family:Poppins;
+  background:linear-gradient(135deg,#ffe6eb,#fff0f5);
+  overflow-x:hidden;
+  text-align:center;
+  transition: background 1s;
+}
+
+h1 { font-family:'Dancing Script',cursive;color:#d6336c; }
+
+#lockscreen {
+  position:fixed;width:100%;height:100%;
+  background:#ff8fa3;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  color:white; z-index:9999;
+}
+
+input {
+  padding:15px;font-size:22px;border-radius:15px;border:none;text-align:center;
+}
+
+button {
+  padding:12px 25px;border:none;border-radius:20px;margin-top:15px;font-weight:bold;cursor:pointer;
+}
+
+.timer { font-size:22px;margin:20px; }
+
+#letter { max-width:700px;margin:30px auto;font-size:20px;min-height:80px; }
+
+.gallery {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:15px; padding:20px;
+  perspective:1000px;
+}
+
+.gallery img {
+  width:280px; height:350px; object-fit:cover;
+  border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,.2);
+  transition: transform 0.5s, box-shadow 0.5s;
+  cursor:pointer;
+}
+.gallery img:hover {
+  transform:scale(1.05) rotateY(5deg);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.heart, .flower, .spark, .star, .candle { 
+  position:fixed; 
+  bottom:-50px; 
+  font-size:24px; 
+  animation:floatUp 8s linear infinite; 
+  opacity:0.7;
+}
+
+@keyframes floatUp {
+  0% { transform:translateY(0) rotate(0deg);}
+  100% { transform:translateY(-120vh) rotate(360deg);}
+}
+
+.candle span {
+  display:block;
+  position:absolute;
+  top:-15px;
+  left:50%;
+  width:6px;
+  height:15px;
+  background:orange;
+  border-radius:50%;
+  animation:flame 1s infinite alternate;
+  transform:translateX(-50%);
+}
+
+@keyframes flame {
+  0% { transform:translateX(-50%) scaleY(1); opacity:1;}
+  100% { transform:translateX(-50%) scaleY(1.3); opacity:0.7;}
+}
+
+body.night { background: linear-gradient(135deg,#2c003e,#55003f); }
+
+</style>
+</head>
+<body>
+
+<div id="lockscreen">
+<h1>❤️ Geheimcode ❤️</h1>
+<input id="codeInput" placeholder="•••••">
+<button onclick="unlock()">Entsperren</button>
+<div id="error"></div>
+</div>
+
+<h1>Unsere Liebe ❤️</h1>
+<div class="timer" id="timer"></div>
+<div id="letter"></div>
+
+<div class="gallery" id="gallery">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny1.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny2.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny3.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny4.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny5.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny6.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny7.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny8.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny9.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny10.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny11.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny12.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny13.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny14.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny15.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny17.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny18.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny19.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny20.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny21.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny22.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny23.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny24.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny25.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny26.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny27.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny28.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny29.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny30.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny31.jpg?raw=true">
+<img src="https://github.com/deejay1905/LoveYou/blob/main/jenny32.jpg?raw=true">
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="perfect_instrumental.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const startDate = new Date("2025-02-26T21:31:00");
+
+function unlock() {
+  const code = document.getElementById("codeInput").value;
+  if (code === "26.02") {
+    document.getElementById("lockscreen").style.display = "none";
+    heartExplosion();
+    startLetter();
+    playMusic();
+    document.body.classList.toggle('night');
+  } else {
+    document.getElementById("error").innerText = "Falscher Code ❤️";
+  }
+}
+
+function heartExplosion() {
+  for (let i = 0; i < 40; i++) {
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "❤️";
+    h.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 6000);
+  }
+}
+
+// Schreibender Liebesbrief
+const text="Seit dem 26.02.2025 um 21:31 Uhr hat sich mein Leben verändert. Jeder Moment mit dir ist ein Geschenk ❤️";
+let i=0;
+function startLetter() {
+  const el = document.getElementById("letter");
+  const interval = setInterval(() => {
+    el.innerHTML += text[i];
+    i++;
+    if(i>=text.length) clearInterval(interval);
+  }, 40);
+}
+
+// Live Timer
+function updateTimer() {
+  const diff = new Date() - startDate;
+  const d = Math.floor(diff/86400000);
+  const h = Math.floor(diff/3600000)%24;
+  const m = Math.floor(diff/60000)%60;
+  const s = Math.floor(diff/1000)%60;
+  document.getElementById("timer").innerText = `Seit ${d} Tagen ${h} Stunden ${m} Minuten ${s} Sekunden zusammen ❤️`;
+}
+setInterval(updateTimer,1000);
+updateTimer();
+
+// Herz, Blumen, Funken, Sterne
+setInterval(()=>createEffect("❤️"), 800);
+setInterval(()=>createEffect("🌸"), 1200);
+setInterval(()=>createEffect("✨"), 1500);
+setInterval(()=>createEffect("⭐"), 1800);
+
+// Kerzen Animation
+setInterval(()=>{
+  let c = document.createElement("div");
+  c.className="candle";
+  c.style.left = Math.random()*100+"vw";
+  c.style.bottom = "20px";
+  let flame = document.createElement("span");
+  c.appendChild(flame);
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),10000);
+},5000);
+
+function createEffect(symbol){
+  let e = document.createElement("div");
+  if(symbol==="⭐"){ e.className="star"; }
+  else e.className="heart";
+  e.innerHTML = symbol;
+  e.style.left = Math.random()*100+"vw";
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),8000);
+}
+
+// Musik abspielen
+function playMusic(){
+  const music=document.getElementById("bgMusic");
+  music.volume=0.4;
+  music.play();
+}
+
+// Parallax-Effekt bei Mausbewegung
+document.addEventListener('mousemove', e => {
+  document.querySelectorAll('.gallery img').forEach(img => {
+    const x = (window.innerWidth/2 - e.clientX)/50;
+    const y = (window.innerHeight/2 - e.clientY)/50;
+    img.style.transform = `translate(${x}px,${y}px) scale(1.03)`;
+  });
+});
+</script>
+</body>
+</html>
